@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MSAI Blog</title>
 </head>
 <body>
-$END$
+<h1>MSAI Blog</h1>
+	{% for id, p in posts.items() %}
+    	<div><a href="/post/{{ id }}">{{p.header}}</a></div>
+  	{% endfor %}
+  	<a href="/post/new">Create new MSAI post</a>
 </body>
 </html>
